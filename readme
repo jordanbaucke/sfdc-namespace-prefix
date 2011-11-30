@@ -29,5 +29,12 @@ public OriginalNameString(){ //... } --> public PackageNameString(){ //... }
 
 11/30/2011 - Created Github repo, started construction of methods.
 
+Resources:
+http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques
+
+Background:
+http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html
+
+About:
 @jordanbaucke
 www.bracketlabs.com 
