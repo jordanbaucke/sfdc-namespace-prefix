@@ -1,0 +1,33 @@
+Quickly Add Namespace Prefixes to SFDC Meta-data Source-code
+
+Namespace Prefixes are required for ALL managed packages on the SFDC platform.
+
+All webservice package references must reference a namespace prefix for 
+deployed code to correctly reference installed packages.
+
+References to custom objects must reference a namespace prefix in API calls:
+
+NSP1__MyCustomObject__c
+
+Managed packages on the SFDC Platform cannot rename/remove member classes, 
+custom objects, visualforce pages, etc. Therefore, a namingConventions.txt
+file will also be run on each individaul file to help users develop a 
+generic copy of the code in non-managed package developer orgs, to have
+classnames and org methods updated.
+
+Format of: namingConventions.txt 
+
+OriginalNameString:PackagedNameString
+
+Example:
+
+OriginalNameString.cls --> PackagedNameString.cls
+
+-and-
+
+public OriginalNameString(){ //... } --> public PackageNameString(){ //... }
+
+11/30/2011 - Created Github repo, started construction of methods.
+
+@jordanbaucke
+www.bracketlabs.com 
