@@ -36,27 +36,52 @@ File.open('namingConsiderations.txt').each_line{ |line|
 # Search the file for the class definitions (public,private)
 # constructors
 #
-def rename_class_definitions(file,namechanges)
-	file = File.open(file)
+def rename_class_definitions(filename,namechanges,namingConsiderations)
+	file = File.open(filename)
     	lines = file.readlines
 	file.close
+	if VERBOS
+		puts('/*************************************** '+filename+' ****************************************/')
+	end
 
     	changes = false
+	objectdefchanges = false
+	countOfObjectChanges = 0
     	lines.each do |line|
-		puts(line)
+		if VERBOS 
+			puts(line)
+		end	
+		#rename public/private constructors
 		changes = true if line.gsub!(/#{'class '+namechanges.unpackaged_name}/, 'class '+namechanges.packaged_name)
-    		
-		changes = true if line.gsub!(/#{}/,'')
+		
+		# rename references to custom objects in source-code files
+		# Incase you create and packaged objects with names that you want to make more generic
+		# MyCustomObject__c --> MyCustomObjectInPackaging__c
+		if CUSTOM_OBJECT_NAMES
+			namingConsiderations.each{ |objectname|
+				if objectname[2] == 'object'
+					objectdefchanges = true if line.gsub!(/#{objectname[0]}/,objectname[1]) 
+					if objectdefchanges
+						countOfObjectChanges = countOfObjectChanges+1
+					end
+				end
+			}
+		end	
 	end
 
     	# Don't write the file if there are no changes
-    	if changes
+    	if changes || objectdefchanges
       		file = File.new([namechanges.packaged_name,'.',namechanges.file_type.chomp].join('').squeeze(' '),'w')
       		lines.each do |line|
        		file.write(line)
       	end
       	file.close
     end
+	if VERBOS
+		puts('/*************************************** /'+filename+' ****************************************/')
+		printf('	Changed: %d references to custom objects',countOfObjectChanges)
+		puts('')
+	end
 end
 
 #
@@ -80,7 +105,7 @@ def check_src_file_name(filename,namingConsiderations)
 				namechange.packaged_name+'.'+namechange.file_type)
 				puts('Rename?');
 				input = gets
-				rename_class_definitions(filename,namechange)	
+				rename_class_definitions(filename,namechange,namingConsiderations)	
 			else
 				rename_class_definitions(namechange)
 			end
