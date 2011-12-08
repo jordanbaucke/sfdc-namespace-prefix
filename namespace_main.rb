@@ -1,5 +1,3 @@
-#custom_object_def_files = ['Meeting__c.txt', 'MeetingMember__c.txt',
- # 'MeetingMemberActivity__c.txt','MeetingsUtility__c.txt']
 custom_object_def_files = ['custom_objects_files.txt']
 
 custom_objects_fields = Array.new

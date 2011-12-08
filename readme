@@ -29,6 +29,11 @@ public OriginalNameString(){ //... } --> public PackageNameString(){ //... }
 
 11/30/2011 - Created Github repo, started construction of methods.
 
+12/8/2011 - Added a 2nd script that was more targeted at JUST replacing namespaces (the first one became too focused on)
+doing one-off replacements to keep legacy class definitions from changing in packaged code.
+
+namespace_main.rb tags a list of object definitions: ObjectDef__c,Field1__c,Field2__c etc.,
+
 Resources:
 http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques
 
