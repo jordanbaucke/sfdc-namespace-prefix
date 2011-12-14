@@ -1,0 +1,3 @@
+<label>Force.com</label>:<label>Namedspaced Force.com</label>
+<tab>Start_Here</tab>:<tab>New_Start_Here</tab>
+<label>Start Here</label>:<label>New Start Here</label>
