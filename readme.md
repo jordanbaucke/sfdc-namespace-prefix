@@ -52,9 +52,9 @@ http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniq
 Background:
 http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html
 
-About:
-[@jordanbaucke][1]
-[www.bracketlabs.com - Agile Project Management for Salesforce.com][3]
+About:</br>
+[@jordanbaucke][1]</br>
+[www.bracketlabs.com: Agile Project Management for Salesforce.com][3]
 
 [1]:http://www.appexchange.com/
 [2]:http://twitter.com/jordanbaucke/
