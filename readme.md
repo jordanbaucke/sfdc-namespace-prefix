@@ -1,6 +1,6 @@
 Quickly Add Namespace Prefixes to SFDC Meta-data Source-code
 
-**Namespace Prefixes are required for ALL managed packages (THAT ARE UPLOADED TO THE APPEXCHANGE!).**
+**Namespace Prefixes are required for ALL managed packages (THAT ARE UPLOADED TO THE [APPEXCHANGE][1]!).**
 
 **Namespace prefixes are automatically inserted in managed packages that are not distributed
 to the AppExchange, except in Javascript calls to @RemoteAction methods, and in actionFunction
@@ -47,15 +47,15 @@ Format of both *naming_considerations.txt: ORIGINAL-LABEL:NEW-LABEL
 <code>$ruby naming_considerations SRC_DIR_TARGET_PATH PATH_TO_NAMING_CONSIDERATIONS.TXT PATH_TO_FILE_NAMING_CONSIDERATIONS.TXT</code>
 
 Resources:
-[http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques][1]
+http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques
 
 Background:
-[http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html][2]
+http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html
 
 About:
-@jordanbaucke
-www.bracketlabs.com 
+[@jordanbaucke][1]
+[www.bracketlabs.com - Agile Project Management for Salesforce.com][3]
 
-[1]:http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques
-[2]:http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html
-
+[1]:http://www.appexchange.com/
+[2]:http://twitter.com/jordanbaucke/
+[3]:http://www.bracketlabs.com/taskray/
