@@ -26,23 +26,24 @@ OriginalNameString.cls --> PackagedNameString.cls
 
 public OriginalNameString(){ //... } --> public PackageNameString(){ //... }
 
-11/30/2011 - Created Github repo, started construction of methods.
+## Updates 
+-11/30/2011 - Created Github repo, started construction of methods.
 
-12/8/2011 - Added a 2nd script that was more targeted at JUST replacing namespaces (the first one became too focused on)
+-12/8/2011 - Added a 2nd script that was more targeted at JUST replacing namespaces (the first one became too focused on)
 doing one-off replacements to keep legacy class definitions from changing in packaged code.
 
-12/14/2011 - Modified the script to be more dynamic, adding two naming-consideration .txt files (with simple examples):
+-12/14/2011 - Modified the script to be more dynamic, adding two naming-consideration .txt files (with simple examples):
 
 naming_considerations.txt: text name changes that are made in code (for namespacing, labels, find and replace etc.)
 file_naming_considerstions.txt: renames files as needed
 
 Format of both *naming_considerations.txt: ORIGINAL-LABEL:NEW-LABEL
 
-<em>**the example operation may not run if you have profiles associated with the tabs/apps that cannot be modified</em>
+**the example operation may not run if you have profiles associated with the tabs/apps that cannot be modified
 
-<strong>NEW USAGE (ARGS):</strong>
+### NEW USAGE (ARGS):
 
-<em>$ruby naming_considerations SRC_DIR_TARGET_PATH PATH_TO_NAMING_CONSIDERATIONS.TXT PATH_TO_FILE_NAMING_CONSIDERATIONS.TXT</em>
+<$ruby naming_considerations SRC_DIR_TARGET_PATH PATH_TO_NAMING_CONSIDERATIONS.TXT PATH_TO_FILE_NAMING_CONSIDERATIONS.TXT>
 
 Resources:
 http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques
