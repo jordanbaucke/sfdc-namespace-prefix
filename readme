@@ -10,7 +10,7 @@ deployed code to correctly reference installed packages.
 
 References to custom objects must reference a namespace prefix in API calls:
 
-NSP1__MyCustomObject__c
+NSP1\_\_MyCustomObject__c
 
 Managed packages on the SFDC Platform cannot rename/remove member classes, 
 custom objects, visualforce pages, etc. Therefore, a namingConventions.txt
@@ -43,14 +43,18 @@ Format of both *naming_considerations.txt: ORIGINAL-LABEL:NEW-LABEL
 
 ### NEW USAGE (ARGS):
 
-<$ruby naming_considerations SRC_DIR_TARGET_PATH PATH_TO_NAMING_CONSIDERATIONS.TXT PATH_TO_FILE_NAMING_CONSIDERATIONS.TXT>
+<code>$ruby naming_considerations SRC_DIR_TARGET_PATH PATH_TO_NAMING_CONSIDERATIONS.TXT PATH_TO_FILE_NAMING_CONSIDERATIONS.TXT</code>
 
 Resources:
-http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques
+[http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques][1]
 
 Background:
-http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html
+[http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html][2]
 
 About:
 @jordanbaucke
 www.bracketlabs.com 
+
+[1]:http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques
+[2]:http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html
+
