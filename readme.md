@@ -53,7 +53,7 @@ Background:
 http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-creates-barrier-to-co.html
 
 About:</br>
-[@jordanbaucke][1]</br>
+@[jordanbaucke][2]</br>
 [www.bracketlabs.com: Agile Project Management for Salesforce.com][3]
 
 [1]:http://www.appexchange.com/
