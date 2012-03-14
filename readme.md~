@@ -34,20 +34,17 @@ _Example_:
 doing one-off replacements to keep legacy class definitions from changing in packaged code.
 
 - **12/14/2011** - Modified the script to be more dynamic, adding two naming-consideration .txt files (with simple examples):
+
 naming_considerations.txt: text name changes that are made in code (for namespacing, labels, find and replace etc.)
 file_naming_considerstions.txt: renames files as needed
+
 Format of both *naming_considerations.txt: ORIGINAL-LABEL:NEW-LABEL
-
-- **3/12/2012** - Added 'ignored' files list, as running this operation on compressed zip files containing static resources seems to be
-corrupting them
-
-ignore_considerations.txt: file_to_be_ingored.resource
 
 **the example operation may not run if you have profiles associated with the tabs/apps that cannot be modified
 
 ### NEW USAGE (ARGS):
 
-<code>$ruby naming_considerations SRC_DIR_TARGET_PATH PATH_TO_NAMING_CONSIDERATIONS.TXT PATH_TO_FILE_NAMING_CONSIDERATIONS.TXT PATH_TO_IGNORE_CONSIDERATIONS.TXT</code>
+<code>$ruby naming_considerations SRC_DIR_TARGET_PATH PATH_TO_NAMING_CONSIDERATIONS.TXT PATH_TO_FILE_NAMING_CONSIDERATIONS.TXT</code>
 
 Resources:
 http://wiki.developerforce.com/page/Bestpractices:Continuous_Integration_Techniques
@@ -57,7 +54,7 @@ http://bracketlabs.com/blog/2011/7/25/salesforces-apex-namespace-requirement-cre
 
 About:</br>
 @[jordanbaucke][2]</br>
-[Agile Project Management for Salesforce.com][3]
+[www.bracketlabs.com: Agile Project Management for Salesforce.com][3]
 
 [1]:http://www.appexchange.com/
 [2]:http://twitter.com/jordanbaucke/
