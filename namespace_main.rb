@@ -1,8 +1,9 @@
+#encoding: utf-8
 class NamingConsideration <
   Struct.new(:unpackaged_name, :packaged_name)
 end
 
-class IgnoreConsiderations <
+class IgnoreConsideration <
   Struct.new(:file_name)
 end
 
@@ -30,7 +31,7 @@ File.open(ARGV[2]).each_line{ |line|
 	file_naming_considerations.push(ns)
 }
 
-#files that should be IGNORED (running find replace on .resource zip files 
+#files that should be IGNORED (running find replace on .resource zip files
 # running the operation on compressed zip, .resource binary (blob?) files seems to
 # corrupt them, so ignore all .resource files that are compressed zips
 ignore_considerations = Array.new
@@ -54,20 +55,20 @@ src_folders.each{|folder|
   puts('Now entering: '+folder)
   Dir.chdir(folder);
   #get all source files in that directory
-  src_files = Dir.glob('*.{cls,page,object,tab,app,layout,resource}')
+  src_files = Dir.glob('*.{cls,component,page,object,tab,app,layout,resource,weblink}')
   src_files.each{ |src_file|
     puts('Now reading: '+src_file)
 	ignored = false
-	
+
 	#check if file should be ignored
 	ignore_considerations.each{|ignored_file|
 		ignored = true if src_file == ignored_file.file_name
 	}
-	
+
 	if ignored
 		puts 'Ignored! '+src_file
 	end
-	
+
 	if !ignored
 		text = File.read(src_file)
 
